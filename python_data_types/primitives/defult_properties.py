@@ -38,15 +38,22 @@ print(float_value)
 """
 BOOLEAN default properties
 """
-# as_integer_ratio
-# bit_length
-# conjugate
-# denominator
-# from_bytes
-# imag
 # numerator
+bool_value = True
+bool_value = bool_value.numerator
+print(bool_value)
+# denominator
+bool_value = True
+bool_value = bool_value.denominator
+print(bool_value)
 # real
-# to_bytes
+bool_value = True
+bool_value = bool_value.real
+print(bool_value)
+# imag
+bool_value = True
+bool_value = bool_value.imag
+print(bool_value)
 """
 STRING default properties
 """

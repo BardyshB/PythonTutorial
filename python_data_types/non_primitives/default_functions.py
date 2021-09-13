@@ -118,3 +118,130 @@ print('k.update({1: 4}) = ', k)
 # values
 k = {1: 2, 'foo': 'bar'}
 print('k.values() = ', k.values())
+"""
+SET default functions
+"""
+# add
+a = {1, 2, 'f'}
+print('a=', a)
+a.add('b')
+print("a.add('b')=", a)
+# clear
+a = {1, 2, 'f'}
+print('a=', a)
+a.clear()
+print("a.clear() = ", a)
+# copy
+c = {1, 2, 3}
+d = c.copy()
+print(d)
+print('c is d', c is d)
+# difference
+c = {1, 2, 3, 5}
+d = {'1', '2', '3', 5}
+print('c.difference(d)=', c.difference(d))
+print('d.difference(c)=', d.difference(c))
+# difference_update
+c = {1, 2, 3, 5}
+d = {1, '2', '3', 5}
+c.difference_update(d)
+print('c.difference_update(d)=', c)
+c = {1, 2, 3, 5}
+d = {1, '2', '3', 5}
+d.difference_update(c)
+print('d.difference_update(c)=', d)
+# discard
+c = {1, 2, 3, 5}
+print('c=', c)
+c.discard(1)
+print('c.discard(1)=', c)
+# intersection
+c = {1, 2, 3, 5}
+d = {1, '2', '3', 5}
+print('d.intersection(c)=', d.intersection(c))
+# intersection_update
+c = {1, 2, 3, 5}
+d = {1, '2', '3', 5}
+c.intersection_update(d)
+print('c.intersection_update(d)=', c)
+# isdisjoint
+c = {1, 2, 3, 5}
+d = {1, '2', '3', 5}
+print('c.isdisjoint(d)=', c.isdisjoint(d))
+c = {1, 2, 3, 5}
+d = {'1', '2', '3', '5'}
+print('c.isdisjoint(d)=', c.isdisjoint(d))
+# issubset
+c = {1, 5}
+d = {1, '2', '3', 5}
+print('c.issubset(d)=', c.issubset(d))
+# issuperset
+c = {1, 2, 3, 5}
+d = {1, 2, 3, '2', '3', 5}
+print('c.issuperset(d)=', d.issuperset(c))
+# pop
+d = {1, 2, 3, '2', '3', 5}
+print('d.pop()=', d.pop())
+print('d=', d)
+# remove
+d = {1, 2, 3, '2', '3', 5}
+d.remove(2)
+print('d.remove(2)=', d)
+# symmetric_difference
+c = {1, 2, 3, 5}
+d = {1, 2, 3, '2', '3', 5}
+print('c.symmetric_difference(d)=', d.symmetric_difference(c))
+# symmetric_difference_update
+c = {1, 2, 3, 5}
+d = {1, 2, 3, '2', '3', 5}
+d.symmetric_difference_update(c)
+print('d.symmetric_difference_update(c)=', d)
+# union
+c = {1, 2, 3, 5}
+d = {1, 2, 3, '2', '3', 5}
+print('c.union(d)=', c.union(d))
+# update
+c = {1, 2, 3, 5}
+d = {1, 2, 3, '2', '3', 5}
+c.update(d)
+print('c.update(d)=', c)
+"""
+FROZENSET default functions
+"""
+# copy
+c = frozenset({1, 2, 3})
+d = c.copy()
+print(d)
+print('c is d', c is d)
+# difference
+c = frozenset({1, 2, 3, 5})
+d = frozenset({'1', '2', '3', 5})
+print('c.difference(d)=', c.difference(d))
+print('d.difference(c)=', d.difference(c))
+# intersection
+c = frozenset({1, 2, 3, 5})
+d = frozenset({1, '2', '3', 5})
+print('d.intersection(c)=', d.intersection(c))
+# isdisjoint
+c = frozenset({1, 2, 3, 5})
+d = frozenset({1, '2', '3', 5})
+print('c.isdisjoint(d)=', c.isdisjoint(d))
+c = frozenset({1, 2, 3, 5})
+d = frozenset({'1', '2', '3', '5'})
+print('c.isdisjoint(d)=', c.isdisjoint(d))
+# issubset
+c = frozenset({1, 5})
+d = frozenset({1, '2', '3', 5})
+print('c.issubset(d)=', c.issubset(d))
+# issuperset
+c = frozenset({1, 2, 3, 5})
+d = frozenset({1, 2, 3, '2', '3', 5})
+print('c.issuperset(d)=', d.issuperset(c))
+# symmetric_difference
+c = frozenset({1, 2, 3, 5})
+d = frozenset({1, 2, 3, '2', '3', 5})
+print('c.symmetric_difference(d)=', d.symmetric_difference(c))
+# union
+c = frozenset({1, 2, 3, 5})
+d = frozenset({1, 2, 3, '2', '3', 5})
+print('c.union(d)=', c.union(d))

@@ -47,7 +47,7 @@ UserString
 """
 Counter
 """
-
+c = Counter()
 """
 OrderedDict
 """
@@ -55,4 +55,4 @@ OrderedDict
 """
 ChainMap
 """
-
+ch = ChainMap()

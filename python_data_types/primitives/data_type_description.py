@@ -59,6 +59,17 @@ print(string1)
 string2 = "this is also string"
 print(string2)
 
+string3 = """
+this is also string
+"""
+print(string3)
+
+string4 = (
+    'my name is'
+    'borys'
+)
+print(string4)
+
 """
 BOOLEAN EXAMPLE
 """

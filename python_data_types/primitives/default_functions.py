@@ -14,7 +14,6 @@ integer_value = integer_value.as_integer_ratio()
 print(integer_value[0], "/", integer_value[1])
 
 # bit_length
-
 integer_value = 2
 integer_value = integer_value.bit_length()
 print(integer_value)  # result: 2 (00, 01, 10, 11)  | max binary - 11 | max denary - 3 | combination - 4
@@ -167,7 +166,7 @@ print(str_val)
 str_val = 'EXTRA STRING FORMATTING FLOAT NUMBER AS SCIENCE NUMBER: {number:e}'
 str_val = str_val.format(number=.123500000)
 print(str_val)
-str_val = 'EXTRA STRING FORMATTING FLOAT NUMBER: {number:e}'
+str_val = 'EXTRA STRING FORMATTING FLOAT NUMBER: {number:.2e}'
 str_val = str_val.format(number=.123500000)
 print(str_val)
 str_val = 'EXTRA STRING FORMATTING DATE: {date_value:%d, %b %Y}'
@@ -321,8 +320,8 @@ print(str_val)
 intab = "aeiou"
 outtab = "12345"
 trantab = str.maketrans(intab, outtab)
-str = "this is string example....wow!!!"
-print(str.translate(trantab))
+_str = "this is string example....wow!!!"
+print(_str.translate(trantab))
 # partition
 str_val = 'lorem|ipsum|'
 str_val = str_val.partition('|')

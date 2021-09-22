@@ -1,8 +1,8 @@
 """
 Python Extra Data Types
 """
-
 from collections import *
+import timeit
 
 """
 deque - Basically the list with ability to faster add elements to start or end  - O(1) complexity vs O(n) for list
@@ -10,6 +10,22 @@ Syntax: deque([el1,el2..])
 """
 dq = deque[1211, 'a', 'sfas']
 print(dq)
+# append speed test
+timeit.timeit('list_object.append("a")', setup='list_object=[]', number=1000000)
+timeit.timeit('deque_object.append("a")', setup='import collections as cl; deque_object=cl.deque()', number=1000000)
+
+# append left speed test
+timeit.timeit('list_object.insert(0, "a")', setup='list_object=[]', number=10000)
+timeit.timeit('deque_object.appendleft("a")', setup='import collections as cl; deque_object=cl.deque()', number=10000)
+
+# pop speed test
+timeit.timeit('list_object.pop()', setup='list_object=list(range(1000000))', number=1000000)
+timeit.timeit('deque_object.pop()', setup='import collections as cl; deque_object=cl.deque(range(1000000))', number=1000000)
+
+# popleft speed test
+timeit.timeit('list_object.pop(0)', setup='list_object=list(range(1000000))', number=10000)
+timeit.timeit('deque_object.popleft()', setup='import collections as cl; deque_object=cl.deque(range(1000000))', number=10000)
+
 
 """
 defaultdict - Same as dict but without raising an error when no key is found 
